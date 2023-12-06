@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-all: #ffffff;
+  --color-bg: hsla(0, 0%, 100%, 1);
+  --color-bg-cards: hsla(240, 9%, 89%, 1);
+  --color-change-theme: hsla(240, 6%, 21%, 1);
+  --color-bg-cards-selected: hsla(194, 97%, 31%, 1);
+  --color-bg-cards-hover-nature: rgb(159, 245, 159);
+  --color-bg-cards-hover-rain: rgb(159, 185, 245);
+  --color-bg-cards-hover-store: rgb(237, 240, 133);
+  --color-bg-cards-hover-fire: rgb(245, 159, 159);
+  --color-time: hsla(240, 6%, 21%, 1);
+  --color-icons-cards: hsla(240, 6%, 21%, 1);
+  --color-buttons: hsla(240, 6%, 21%, 1);
+
+  font-size: 62.5%;
+}
+
+html.dark {
+  --color-all: hsla(0, 0%, 100%, 1);
+  --color-bg: hsla(240, 6%, 21%, 1);
+  --color-bg-cards: hsla(240, 9%, 89%, 1);
+  --color-bg-cards-selected: hsla(194, 97%, 31%, 1);
+  --color-time: hsla(240, 9%, 89%, 1);
+  --color-icons-cards: hsla(240, 6%, 21%, 1);
+  --color-change-theme: hsla(240, 9%, 89%, 1);
+  --color-buttons: hsla(240, 9%, 89%, 1);
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun {
+  display: none;
+}
+
+.ph1 {
+  color: var(--color-buttons);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+
+  background-color: var(--color-bg);
+  color: var(--color-buttons);
+}
+
+#header {
+  position: absolute;
+  right: 3.2rem;
+  top: 3.2rem;
+}
+
+#toggle-mode {
+  font-size: 3.1rem;
+
+  border: none;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+#app {
+  display: grid;
+  place-content: center;
+
+  height: 100vh;
+}
+
+.sections-wrappers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+
+  padding: 1rem;
+  gap: 8rem;
+}
+
+/* Controladores */
+#minutes,
+#seconds,
+#span {
+  font-size: 13rem;
+}
+
+#timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 3rem;
+}
+
+.ph {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+.controls button {
+  border: 0;
+  background-color: transparent;
+
+  color: var(--color-buttons);
+}
+
+.secondary {
+  display: none;
+}
+
+/* Cards */
+
+#cards-wrappers {
+  display: grid;
+  grid-template-areas:
+    "A B"
+    "C D";
+}
+#cardRain {
+  grid-area: B;
+}
+#cardStore {
+  grid-area: C;
+}
+#cardFire {
+  grid-area: D;
+}
+
+.cards {
+  background-color: var(--color-bg-cards);
+  color: var(--color-icons-cards);
+
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 6rem;
+  margin: 2rem;
+
+  border-radius: 0.4rem;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+}
+
+#cardTree.active,
+#cardTree:hover {
+  background-color: var(--color-bg-cards-hover-nature);
+}
+
+#cardRain.active,
+#cardRain:hover {
+  background-color: var(--color-bg-cards-hover-rain);
+}
+#cardStore.active,
+#cardStore:hover {
+  background-color: var(--color-bg-cards-hover-store);
+}
+#cardFire.active,
+#cardFire:hover {
+  background-color: var(--color-bg-cards-hover-fire);
+}
+
+.cards i {
+  font-size: 5rem;
+}
+
+.cards:hover .range {
+  background-color: var(--color-all);
+}
+
+/* controls */
+.running .ph-play-circle,
+.running .ph-timer,
+.running .ph-plus-circle,
+.running .ph-minus-circle,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
+
+@media (max-width: 876px) {
+  .sections-wrappers {
+    width: 40rem;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  #minutes,
+  #seconds,
+  #span {
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  .ph {
+    font-size: 4rem;
+  }
+
+  .cards {
+    padding: 4rem;
+  }
+
+  #header {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+  }
+
+  #toggle-mode {
+    font-size: 2.5rem;
+  }
+}

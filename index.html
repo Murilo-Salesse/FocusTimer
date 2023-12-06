@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer 2.0</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script src="src/main.js" defer type="module"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header id="header">
+      <button id="toggle-mode">
+        <span class="sr-only">Light mode!</span>
+        <i class="ph1 ph-bold ph-sun"></i>
+        <i class="ph1 ph-bold ph-moon"></i>
+      </button>
+    </header>
+
+    <div class="sections-wrappers">
+      <section id="timer">
+        <div class="spans-wrappers">
+          <span id="minutes">25</span>
+          <span id="span">:</span>
+          <span id="seconds">00</span>
+        </div>
+
+        <div class="controls">
+          <button data-action="toggleRunning" data class="ph ph-bold ph-play-circle">
+            <span class="sr-only">Iniciar Contador</span>
+          </button>
+
+          <button data-action="pauseRunning" class="ph ph-bold ph-pause-circle">
+            <span class="sr-only">Pausar Contador</span>
+          </button>
+
+          <button id="pauseTimer" data-action="reset" class="ph ph-bold ph-stop-circle">
+            <span class="sr-only">Reiniciar Contador</span>
+          </button>
+
+          <button data-action="plusFive" class="ph ph-bold ph-plus-circle">
+            <span class="sr-only">Aumentar Contador</span>
+          </button>
+
+          <button data-action="lessFive" class="ph ph-bold ph-minus-circle">
+            <span class="sr-only">Diminuir Contador</span>
+          </button>
+
+          <button data-action="set" class="ph ph-bold ph-timer">
+            <span class="sr-only">Ajustar Contador</span>
+          </button>
+        </div>
+      </section>
+
+
+      <section id="cards-wrappers">
+        <div data-action="soundTree" id="cardTree" class="cards">
+          <i data-action="soundTree" class="ph-bold ph-tree"></i>
+        </div>
+
+        <div data-action="soundRain" id="cardRain" class="cards">
+          <i data-action="soundRain" class="ph-bold ph-cloud-rain"></i>
+        </div>
+
+        <div data-action="soundStore" id="cardStore" class="cards">
+          <i data-action="soundStore" class="ph-bold ph-storefront"></i>
+        </div>
+
+        <div data-action="soundFire" id="cardFire" class="cards">
+          <i data-action="soundFire" class="ph-bold ph-fire-simple"></i>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+
+
+</html>
