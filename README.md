@@ -19,6 +19,12 @@
   Dark mode
 </p>
 
+<p align="center">
+  <img alt="mobile mode" src="https://i.imgur.com/Uu5mnGV.jpg" width="400px" heigth="400px">
+  <br>
+  Mobile
+</p>
+
 
 ## Tecnologias
 
