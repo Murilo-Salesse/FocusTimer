@@ -53,6 +53,11 @@ Este é um projeto JavaScript que implementa um temporizador (estilo Pomodoro) p
   - `cafeteria`
   - `lareira`
 
+## Como Usar
+
+<p>- Para acessar ao projeto finalizado, <a href="https://murilo-salesse.github.io/FocusTimer/">clique aqui</a>.</p>
+
+
 
 ## Arquivos
 
