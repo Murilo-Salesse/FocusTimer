@@ -55,9 +55,7 @@ Este é um projeto JavaScript que implementa um temporizador (estilo Pomodoro) p
 
 ## Como Usar
 
-<p>- Para acessar ao projeto finalizado, <a href="https://murilo-salesse.github.io/FocusTimer/">clique aqui</a>.</p>
-
-
+<p>- Para acessar ao projeto finalizado, <a href="https://murilo-salesse.github.io/FocusTimer/" target="_blank">clique aqui</a>.</p>
 
 ## Arquivos
 
